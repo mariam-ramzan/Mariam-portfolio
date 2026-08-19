@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Dark/Light mode class strategy — theme toggle ke liye zaroori */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand accents — electric blue / cyan / violet */
+  --color-brand-500: #3b82f6;
+  --color-brand-400: #60a5fa;
+  --color-cyan-glow: #22d3ee;
+  --color-violet-glow: #8b5cf6;
+
+  /* Dark surfaces */
+  --color-ink-950: #05070d;
+  --color-ink-900: #0a0f1c;
+  --color-ink-800: #111827;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden; /* horizontal scroll rokne ke liye */
+}
